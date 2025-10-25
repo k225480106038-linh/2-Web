@@ -34,22 +34,32 @@
 - Cài đặt nodered:
   + chạy cmd, vào thư mục `D:\nodejs`, chạy lệnh `npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered"`
 
-  ![Uploading image.png…]()
+<img width="951" height="629" alt="image" src="https://github.com/user-attachments/assets/e11ccadd-880b-436d-ac5c-bcb869c0ac8f" />
 
   + download file: https://nssm.cc/release/nssm-2.24.zip
     giải nén được file nssm.exe
     copy nssm.exe vào thư mục `D:\nodejs\nodered\`
+
+    <img width="1414" height="797" alt="image" src="https://github.com/user-attachments/assets/7291abd0-c54a-4c9b-8da7-84f11697685c" />
+
   + tạo file "D:\nodejs\nodered\run-nodered.cmd" với nội dung (5 dòng sau):
 @echo off
 REM fix path
 set PATH=D:\nodejs;%PATH%
 REM Run Node-RED
 node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work" %*
+
+<img width="1104" height="405" alt="image" src="https://github.com/user-attachments/assets/a2bbd355-87ee-4955-a8e4-88fa551ff3ea" />
+
   + mở cmd, chuyển đến thư mục: `D:\nodejs\nodered`
   + cài đặt service `a1-nodered` bằng lệnh: nssm.exe install a1-nodered "D:\nodejs\nodered\run-nodered.cmd"
-  + chạy service `a1-nodered` bằng lệnh: `nssm start a1-nodered`
+ + chạy service `a1-nodered` bằng lệnh: `nssm start a1-nodered`
+
+   ![Uploading image.png…]()
+
 2.3. Tạo csdl tuỳ ý trên mssql (sql server 2022), nhớ các thông số kết nối: ip, port, username, password, db_name, table_name
-    
+    ![Uploading image.png…]()
+
 2.4. Cài đặt thư viện trên nodered:
 - truy cập giao diện nodered bằng url: http://localhost:1880
 - cài đặt các thư viện: node-red-contrib-mssql-plus, node-red-node-mysql, node-red-contrib-telegrambot, node-red-contrib-moment, node-red-contrib-influxdb, node-red-contrib-duckdns, node-red-contrib-cron-plus

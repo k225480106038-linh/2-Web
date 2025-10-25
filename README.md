@@ -1,4 +1,4 @@
-<img width="1488" height="287" alt="image" src="https://github.com/user-attachments/assets/20dd07db-2685-46cc-b9d9-dbf2514ba835" /># Bài 2-Web
+# Bài 2-Web
 2. NỘI DUNG BÀI TẬP:
    
 2.1. Cài đặt Apache web server:
@@ -68,6 +68,8 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 
 - cài đặt các thư viện: node-red-contrib-mssql-plus, node-red-node-mysql, node-red-contrib-telegrambot, node-red-contrib-moment, node-red-contrib-influxdb, node-red-contrib-duckdns, node-red-contrib-cron-plus
 
+<img width="936" height="695" alt="image" src="https://github.com/user-attachments/assets/ea1bd2ce-1547-462b-bfa4-8b0b5c82e15d" />
+
 
 - Sửa file `D:\nodejs\nodered\work\settings.js` : 
   tìm đến chỗ adminAuth, bỏ comment # ở đầu dòng (8 dòng), thay chuỗi mã hoá mật khẩu bằng chuỗi mới
@@ -81,12 +83,10 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
     },   
    với mã hoá mật khẩu có thể thiết lập bằng tool: https://tms.tnut.edu.vn/pw.php
 
-![Uploading Screenshot 2025-10-25 224856.png…]()
 
 
 - chạy lại nodered bằng cách: mở cmd, vào thư mục `D:\nodejs\nodered` và chạy lệnh `nssm restart a1-nodered`
 
-  ![Uploading image.png…]()
 
   khi đó nodered sẽ yêu cầu nhập mật khẩu mới vào được giao diện cho admin tại: http://localhost:1880
   

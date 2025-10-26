@@ -145,11 +145,24 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 <img width="1816" height="967" alt="image" src="https://github.com/user-attachments/assets/b3fd2486-3f53-4067-987e-f8a09d955ec1" />
 
 2.7. Nhận xét bài làm của mình:
-- đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
-+ Em đã nắm rõ các bước cài đặt và cấu hình các phần mềm cần thiết cho hệ thống.
-+ Biết cách vô hiệu hóa IIS, cài đặt và cấu hình Apache Web Server để chạy website thông qua tên miền giả lập (ngothithuylinh.com) bằng file hosts.
-+ Cài đặt thành công Node.js và Node-RED, biết cách cài đặt các thư viện mở rộng như: node-red-contrib-mssql-plus, node-red-node-mysql, node-red-contrib-moment, node-red-contrib-telegrambot,...
-+ Hiểu cách cấu hình file settings.js để thiết lập bảo mật (adminAuth) và biết chạy Node-RED dưới dạng service bằng NSSM, cũng như khởi động lại Node-RED bằng lệnh nssm restart a1-nodered.
+- Đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
+  + Em đã nắm rõ các bước cài đặt và cấu hình các phần mềm cần thiết cho hệ thống.
+  + Biết cách vô hiệu hóa IIS, cài đặt và cấu hình Apache Web Server để chạy website thông qua tên miền giả lập (ngothithuylinh.com) bằng file hosts.
+  + Cài đặt thành công Node.js và Node-RED, biết cách cài đặt các thư viện mở rộng như: node-red-contrib-mssql-plus, node-red-node-mysql, node-red-contrib-moment, node-red-contrib-telegrambot,...
+  + Hiểu cách cấu hình file settings.js để thiết lập bảo mật (adminAuth) và biết chạy Node-RED dưới dạng service bằng NSSM, cũng như khởi động lại Node-RED bằng lệnh nssm restart a1-nodered.
   
-- đã hiểu cách sử dụng nodered để tạo api back-end như nào?
-- đã hiểu cách frond-end tương tác với back-end ra sao?
+- Đã hiểu cách sử dụng nodered để tạo api back-end như nào?
+  + Em đẫ hiểu quy trình tạo API trong Node-RED dựa trên các node:
+HTTP In → Function → MSSQL → HTTP Response.
+  + Biết cách dùng HTTP In node để nhận yêu cầu từ client, sử dụng Function node để xử lý tham số truyền vào và viết câu lệnh SQL, dùng MSSQL node để truy vấn dữ liệu trong SQL Servervà HTTP Response node để trả kết quả về cho client dưới dạng JSON.
+  + Đã thực hành xây dựng API /timkiem cho phép tìm kiếm thông tin hoa theo tên hoặc loại, và kiểm thử thành công trên trình duyệt.
+  + Qua đó, em hiểu được vai trò của Node-RED trong việc tạo API back-end tự động, trực quan và dễ quản lý.
+- Đã hiểu cách frond-end tương tác với back-end ra sao?
+  + Em đã hiểu cơ chế giao tiếp giữa front-end (HTML, CSS, JavaScript) và back-end Node-RED.
+  + Khi người dùng nhập từ khóa tìm kiếm trên giao diện web, đoạn mã JavaScript (ngothithuylinh.js) sẽ gửi HTTP request đến API Node-RED (ví dụ: /timkiem?tenhoa=hoa hồng đỏ).
+  + Node-RED xử lý yêu cầu, truy vấn dữ liệu trong SQL Server, sau đó gửi JSON response về cho front-end.
+  + JavaScript sẽ đọc dữ liệu JSON này và hiển thị kết quả lên giao diện người dùng.
+- Đánh giá tổng quan :
+  + Bài thực hành giúp em hiểu rõ toàn bộ quy trình xây dựng một hệ thống web gồm cả phần giao diện (Apache) và phần xử lý dữ liệu (Node-RED + SQL Server).
+  + Em đã củng cố được kiến thức về cấu hình môi trường, kết nối cơ sở dữ liệu, xử lý logic API, và hiển thị dữ liệu từ server lên trình duyệt.
+  + Em cũng học được cách sử dụng các công cụ mã nguồn mở như Node-RED để giảm bớt công việc lập trình mà vẫn đảm bảo hiệu quả và tính trực quan cao.
